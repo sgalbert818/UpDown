@@ -1,0 +1,206 @@
+/*color palette:
+    pink: #ff4095
+    orange: #ff7c13
+    yellow: #ffff00
+    green: #86ff00
+    blue: #00aeff
+*/
+
+* {
+    margin: auto;
+    color: white;
+    background-color: black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Share Tech Mono', monospace;
+    color: white;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+h3 {
+    font-size: 1.4em;
+}
+
+h5 {
+    font-size: 1em;
+}
+
+/* NAV BAR */
+
+nav {
+    position: sticky;
+    top: 0;
+}
+
+.nav-bar {
+    height: 60px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    border-bottom: 3px solid #ff4095;
+}
+
+.nav-bar h4 {
+    margin: auto 6%;
+    transition: 0.7s;
+}
+
+.nav-bar h4:hover {
+    color: #ff4095;
+    cursor: pointer;
+}
+
+/* CONTAINER 1 */
+
+.container-1 {
+    width: 100%;
+    height: auto;
+    background-color: black;
+}
+
+.divider {
+    width: 80%;
+    height: 300px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text, .img {
+    margin: 0;
+    height: 100%;
+    width: 46%;
+}
+
+.day, .description {
+    width: 100%;
+}
+
+.day {
+    height: 20%;
+    margin-top: 3%;
+    padding-top: 10px;
+    display: flex;
+}
+
+.monday .text .day, .wednesday .text .day, .friday .text .day, .sunday .text .day {
+    justify-content: flex-start;
+}
+
+.tuesday .text .day, .thursday .text .day, .saturday .text .day {
+    justify-content: flex-end;
+}
+
+.day img {
+    height: 60px;
+    width: auto;
+    padding: 0 20px;
+    margin-top: -5px;
+}
+
+.day h1, .day img {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.description {
+    height: 70%;
+    margin-top: 1%;
+}
+
+.description h3 {
+    margin-top: 10px;
+}
+
+.monday .text .day, .monday .text .description, .wednesday .text .day, .wednesday .text .description, .friday .text .day, .friday .text .description, .sunday .text .day, .sunday .text .description {
+    text-align: left;
+}
+
+.tuesday .text .day, .tuesday .text .description, .thursday .text .day, .thursday .text .description, .saturday .text .day, .saturday .text .description {
+    text-align: right;
+}
+
+.img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* FOOTER */
+
+footer {
+    height: 150px;
+    width: 100%;
+    background-color: black;
+}
+
+#inner-4 {
+    border: 1px solid #ff409600;
+    height: 40px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    background-color: black;
+}
+
+#inner-4 h6 {
+    margin: auto 8px;
+    
+}
+
+.bullet {
+    font-size: 30px;
+}
+
+.grey {
+    color: rgba(255, 255, 255, 0.366);
+}
+
+.pink {
+    color: #ff4095;;
+}
+
+.orange {
+    color: #ff7c13;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.green {
+    color: #86ff00;
+}
+
+.blue {
+    color: #00aeff;
+}
+
+/* CONTAINER 2 */
+
+.container-2 {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-2 h1 {
+    margin: 0;
+    padding-top: 40px;
+}
+
+a:link {
+    text-decoration: none;
+}
