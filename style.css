@@ -353,7 +353,7 @@ h5 {
         margin-top: 30px;
     }
 
-    #map {
+    #map, #text-to-hide {
         display: none;
     }
 
@@ -368,12 +368,13 @@ h5 {
     #box-5 {
         border-bottom: 3px solid #ff4095
     }
+
 }
 
 /* CONTAINER 3 */
 
 .container-3 {
-    height: 300px;
+    height: auto;
     width: 100%;
     background-color: black;
     text-align: center;
@@ -391,6 +392,16 @@ h5 {
 
 .container-3-text h3 {
     padding: 5px 0;
+}
+
+@media (max-width: 600px) {
+    .container-3-text h3 {
+        font-size: 1em;
+    }
+
+    .container-3-text h2 {
+        font-size: 1.2em;
+    }
 }
 
 /* CONTAINER 4 */
@@ -445,6 +456,7 @@ footer {
     justify-content: center;
     padding-top: 40px;
     background-color: black;
+    text-align: center;
 }
 
 #inner-4 h6 {
@@ -482,7 +494,7 @@ footer {
 
 @media (max-width: 600px) {
     #inner-4 h6 {
-      font-size: 0.4em;
+      font-size: 0.3em;
     }
 
 }
