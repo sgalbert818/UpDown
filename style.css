@@ -473,19 +473,18 @@ footer {
 
 #inner-4 {
     border: 1px solid #ff409600;
-    height: 40px;
+    height: auto;
     width: 90%;
     display: flex;
     justify-content: center;
-    padding-top: 40px;
     background-color: black;
     text-align: center;
     flex-wrap: wrap;
 }
 
 #inner-4 h6 {
-    margin: auto 8px;
-    
+    margin: auto 8px; 
+    line-height: 30px
 }
 
 .bullet {
