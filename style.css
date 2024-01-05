@@ -172,6 +172,24 @@ h5 {
     animation-delay: 1.6s ;
 }
 
+@media (max-width: 600px) {
+    .cocktails {
+        animation-delay: 0.1s ;
+    }
+    
+    .pizza {
+        animation-delay: 0.2s ;
+    }
+    
+    .games {
+        animation-delay: 0.3s ;
+    }
+    
+    .music {
+        animation-delay: 0.4s ;
+    }
+}
+
 .icon-img {
     width: 70px;
     height: 70px;
@@ -353,7 +371,7 @@ h5 {
         margin-top: 30px;
     }
 
-    #map, #text-to-hide {
+    #map, .text-to-hide {
         display: none;
     }
 
@@ -367,6 +385,10 @@ h5 {
 
     #box-5 {
         border-bottom: 3px solid #ff4095
+    }
+
+    .pizza h5, .beer h5, .music h5, .cocktails h5, .games h5 {
+        padding: 0 70px;
     }
 
 }
@@ -457,6 +479,7 @@ footer {
     padding-top: 40px;
     background-color: black;
     text-align: center;
+    flex-wrap: wrap;
 }
 
 #inner-4 h6 {
@@ -490,11 +513,4 @@ footer {
 
 .blue {
     color: #00aeff;
-}
-
-@media (max-width: 600px) {
-    #inner-4 h6 {
-      font-size: 0.3em;
-    }
-
 }

@@ -70,7 +70,7 @@ nav {
 .divider {
     width: 80%;
     height: 300px;
-    margin-top: 50px;
+    margin-top: 60px;
     display: flex;
     justify-content: space-between;
 }
@@ -133,6 +133,15 @@ nav {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    object-position: bottom;
+}
+
+.tuesday .img img, .wednesday .img img, .thursday .img img {
+    object-position: center;
+}
+
+.friday .img img, .saturday .img img {
+    object-position: top;
 }
 
 /* FOOTER */
@@ -151,6 +160,8 @@ footer {
     justify-content: center;
     padding-top: 40px;
     background-color: black;
+    text-align: center;
+    flex-wrap: wrap;
 }
 
 #inner-4 h6 {
@@ -189,7 +200,7 @@ footer {
 /* CONTAINER 2 */
 
 .container-2 {
-    height: 200px;
+    height: 175px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -203,4 +214,23 @@ footer {
 
 a:link {
     text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    .divider {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .tuesday, .thursday, .saturday {
+        flex-direction: column-reverse;
+    }
+
+    .img, .text {
+        width: 100%;
+    }
+
+    .img {
+        height: 200px;
+    }
 }

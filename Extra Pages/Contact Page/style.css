@@ -173,8 +173,10 @@ button {
     background-color: black;
     font-family: 'Share Tech Mono', monospace;
     font-size: 1.4em;
-    padding: 40px 140px;
     margin: 0;
+    height: 120px;
+    width: 50%;
+    max-width: 300px;
 }
 
 /* FOOTER */
@@ -193,6 +195,8 @@ footer {
     justify-content: center;
     padding-top: 40px;
     background-color: black;
+    text-align: center;
+    flex-wrap: wrap;
 }
 
 #inner-4 h6 {
