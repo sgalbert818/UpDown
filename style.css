@@ -104,7 +104,7 @@ h5 {
 .main-logo img {
     object-fit: cover;
     height: auto;
-    width: 500px;
+    width: 50%;
     filter: drop-shadow(1px 1px 10px rgba(0, 0, 0, 1));
 }
 
@@ -154,7 +154,7 @@ h5 {
       margin: 3% 0;
       height: 380px;
     }
-  }
+}
 
 .cocktails {
     animation-delay: 0.4s ;
@@ -199,18 +199,18 @@ h5 {
     .cocktails h5, .games h5, .beer h5, .pizza h5, .music h5 {
       font-size: 0.8em;
     }
-  }
+}
 
-  @media only screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
     .cocktails h5, .games h5, .beer h5, .pizza h5, .music h5 {
       font-size: 0.7em;
     }
-  }
+}
 
 /* CONTAINER 2 */
 
 .container-2 {
-    height: 1500px;
+    height: auto;
     width: 100%;
     background-color: black;
     margin-top: -80px;
@@ -281,7 +281,6 @@ h5 {
     cursor: pointer;
 }
 
-
 #inner-2 {
     border: 3px solid #86ff00;
     text-align: right;
@@ -335,6 +334,40 @@ h5 {
 
 #middle {
     border-bottom: 3px solid #ff7c13;
+}
+
+@media (max-width: 600px) {
+    #top, #bottom {
+      flex-direction: column;
+    }
+
+    #middle {
+        flex-direction: column-reverse;
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    #inner-1 h2, #inner-3 h2 {
+        margin-top: 30px;
+    }
+
+    #map {
+        display: none;
+    }
+
+    #box-1 {
+        border-bottom: 3px solid #86ff00;
+    }
+
+    #box-4 {
+        border-bottom: 3px solid yellow;
+    }
+
+    #box-5 {
+        border-bottom: 3px solid #ff4095
+    }
 }
 
 /* CONTAINER 3 */
@@ -447,11 +480,9 @@ footer {
     color: #00aeff;
 }
 
-/* CONTAINER 6 */
+@media (max-width: 600px) {
+    #inner-4 h6 {
+      font-size: 0.4em;
+    }
 
-.container-6 {
-    width: 600px;
-    height: 20px;
-    background-color: red;
-    margin: 0;
 }
