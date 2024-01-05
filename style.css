@@ -126,22 +126,35 @@ h5 {
 /* CONTAINER 1 */
 
 .container-1 {
-    height: 470px;
+    height: auto;
     width: 100%;
     background-color: black;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
     border-top: 3px solid yellow;
 }
 
 .cocktails, .games, .beer, .pizza, .music {
-    height: 50vh;
+    flex-basis: 100%;
     width: 16%;
-    margin: 8vh 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    height: 280px;
 }
+
+@media (min-width: 600px) {
+    .container-1 {
+      flex-wrap: nowrap;
+    }
+
+    .cocktails, .games, .beer, .pizza, .music {
+      flex-basis: 20%;
+      margin: 3% 0;
+      height: 380px;
+    }
+  }
 
 .cocktails {
     animation-delay: 0.4s ;
@@ -432,4 +445,13 @@ footer {
 
 .blue {
     color: #00aeff;
+}
+
+/* CONTAINER 6 */
+
+.container-6 {
+    width: 600px;
+    height: 20px;
+    background-color: red;
+    margin: 0;
 }
