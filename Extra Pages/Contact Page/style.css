@@ -182,9 +182,10 @@ button {
 /* FOOTER */
 
 footer {
-    height: 150px;
+    height: auto;
     width: 100%;
     background-color: black;
+    padding: 20px 0 75px 0;
 }
 
 #inner-4 {
