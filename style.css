@@ -78,6 +78,10 @@ h5 {
     opacity: 0.3;
 }
 
+.address a h4 {
+    text-shadow: 0 0 6px black;
+}
+
 #nav-bar-location-pin {
     height: 25px;
     width: 25px;
@@ -104,7 +108,7 @@ h5 {
 .main-logo img {
     object-fit: cover;
     height: auto;
-    width: 50%;
+    width: 60%;
     filter: drop-shadow(1px 1px 10px rgba(0, 0, 0, 1));
 }
 
@@ -341,7 +345,7 @@ h5 {
     height: 150px;
 }
 
- iframe {
+iframe {
     height: 100%;
     width: 100%;
 }
@@ -367,7 +371,7 @@ h5 {
         width: 100%;
     }
 
-    #inner-1 h2, #inner-3 h2 {
+    #inner-1 h2, #inner-2 h2, #inner-3 h2 {
         margin-top: 30px;
     }
 
@@ -390,6 +394,16 @@ h5 {
     .pizza h5, .beer h5, .music h5, .cocktails h5, .games h5 {
         padding: 0 70px;
     }
+
+    #inner-1 h4, #inner-3 h4 {
+        margin: 20px 0 0 40px;
+        padding-right: 50px;
+    }
+
+    #inner-2 h4 {
+        padding-left: 50px;
+    }
+
 
 }
 
@@ -513,4 +527,10 @@ footer {
 
 .blue {
     color: #00aeff;
+}
+
+@media (max-width: 600px) {
+    .container-4 h4 {
+        font-size: 0.8em;
+    }
 }

@@ -61,6 +61,12 @@ nav {
     cursor: pointer;
 }
 
+@media (max-width: 600px) {
+    .nav-bar h4 {
+        font-size: 0.8em;
+    }
+}
+
 /* HEADER */
 
 .header, .toggle-menus {
