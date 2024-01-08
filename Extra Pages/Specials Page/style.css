@@ -9,6 +9,9 @@
 * {
     margin: auto;
     color: white;
+}
+
+body {
     background-color: black;
 }
 
@@ -38,6 +41,7 @@ h5 {
 nav {
     position: sticky;
     top: 0;
+    z-index: 5;
 }
 
 .nav-bar {
@@ -68,86 +72,115 @@ nav {
 /* CONTAINER 1 */
 
 .container-1 {
-    width: 100%;
     height: auto;
-    background-color: black;
-}
-
-.divider {
-    width: 80%;
-    height: 300px;
-    margin-top: 60px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.text, .img {
-    margin: 0;
-    height: 100%;
-    width: 46%;
-}
-
-.day, .description {
     width: 100%;
-}
-
-.day {
-    height: 20%;
-    margin-top: 3%;
-    padding-top: 10px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.monday .text .day, .wednesday .text .day, .friday .text .day, .sunday .text .day {
-    justify-content: flex-start;
-}
-
-.tuesday .text .day, .thursday .text .day, .saturday .text .day {
-    justify-content: flex-end;
-}
-
-.day img {
-    height: 60px;
+.flip {
+    height: auto;
     width: auto;
-    padding: 0 20px;
-    margin-top: -5px;
+    margin: 0;
+    background-color: transparent;
+    perspective: 1000px;
 }
 
-.day h1, .day img {
-    margin-left: 0;
-    margin-right: 0;
+.flip-card {
+    height: 350px;
+    width: 350px;
+    margin: 0 15px 30px 15px;
+    border-radius: 3%;
+    position: relative;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
 }
 
-.description {
-    height: 70%;
-    margin-top: 1%;
+.flip:focus {
+    outline: 0;
 }
 
-.description h3 {
-    margin-top: 10px;
+.flip:hover .flip-card,
+.flip:focus .flip-card{
+  transform: rotateY(180deg);
 }
 
-.monday .text .day, .monday .text .description, .wednesday .text .day, .wednesday .text .description, .friday .text .day, .friday .text .description, .sunday .text .day, .sunday .text .description {
-    text-align: left;
+.front, .back {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 2%;
 }
 
-.tuesday .text .day, .tuesday .text .description, .thursday .text .day, .thursday .text .description, .saturday .text .day, .saturday .text .description {
-    text-align: right;
+.front {
+    white-space: nowrap;
+    z-index: 2;
+    background-color: transparent;
 }
 
-.img img {
+.back {
+    z-index: 1;
+    background-color: black;
+    transform: rotateY(180deg);
+    top: -3px;
+    left: -3px;
+}
+
+.back h3 {
+    margin: 40px 30px;
+}
+
+.back-6 h3, .back-1 h3 {
+    font-size: 1em;
+}
+
+.front h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 5px black;
+    font-size: 30px;
+}
+
+.front img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    object-position: bottom;
+    border-radius: 2%;
+    background-color: transparent;
 }
 
-.tuesday .img img, .wednesday .img img, .thursday .img img {
-    object-position: center;
+.item-1, .item-6, .back-1, .back-6 {
+    border: 3px solid #00aeff;
 }
 
-.friday .img img, .saturday .img img {
-    object-position: top;
+.item-2, .back-2 {
+    border: 3px solid #ff7c13;
+}
+
+.item-3, .back-3 {
+    border: 3px solid #86ff00;
+}
+
+.item-4, .back-4 {
+    border: 3px solid #ff4095;
+}
+
+.item-5, .back-5 {
+    border: 3px solid yellow;
+}
+
+@media (max-width: 600px) {
+    .flip-card {
+        height: 300px;
+        width: 300px;
+    }
 }
 
 /* FOOTER */
@@ -212,6 +245,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 50px;
 }
 
 .container-2 h1 {
@@ -221,39 +255,4 @@ footer {
 
 a:link {
     text-decoration: none;
-}
-
-@media (max-width: 600px) {
-    .divider {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .tuesday, .thursday, .saturday {
-        flex-direction: column-reverse;
-    }
-
-    .img, .text {
-        width: 100%;
-    }
-
-    .img {
-        height: 150px;
-    }
-
-    .img img {
-        object-position: bottom;
-    }
-    
-    .tuesday .img img, .wednesday .img img, .thursday .img img {
-        object-position: center;
-    }
-    
-    .friday .img img, .saturday .img img {
-        object-position: top;
-    }
-
-    .monday .img img {
-        object-position: bottom;
-    }
 }
