@@ -121,6 +121,8 @@ nav {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #00aeff
 }
 
 /* CONTAINER */
@@ -138,6 +140,9 @@ nav {
 #map {
     height: 100%;
     width: 100%;
+    -webkit-border-radius: 10px;
+    z-index:0;
+    border: 3px solid #ff7c13;
 }
 
 /* FOOTER */
@@ -226,4 +231,19 @@ a:link {
     .description h3 {
         font-size: 1em;
     }
+}
+
+@keyframes fadeInUp {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: 0.75s both fadeInUp;
 }

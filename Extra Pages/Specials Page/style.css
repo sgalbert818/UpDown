@@ -181,6 +181,10 @@ nav {
         height: 300px;
         width: 300px;
     }
+
+    .front h2 {
+        font-size: 1.5em;
+    }
 }
 
 /* FOOTER */
@@ -255,4 +259,19 @@ footer {
 
 a:link {
     text-decoration: none;
+}
+
+@keyframes fadeInUp {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: 0.75s both fadeInUp;
 }
